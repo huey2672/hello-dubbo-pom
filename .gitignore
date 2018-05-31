@@ -1,1 +1,4 @@
-/target/
+/hello-dubbo-config/target/
+/hello-dubbo-api/target/
+/hello-dubbo-service/target/
+/hello-dubbo-web/target/
