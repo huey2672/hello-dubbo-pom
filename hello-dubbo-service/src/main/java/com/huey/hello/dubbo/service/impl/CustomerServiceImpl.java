@@ -1,7 +1,5 @@
 package com.huey.hello.dubbo.service.impl;
 
-import org.springframework.stereotype.Service;
-
 import com.huey.hello.dubbo.service.CustomerService;
 import com.huey.hello.dubbo.vo.Customer;
 
@@ -9,7 +7,6 @@ import com.huey.hello.dubbo.vo.Customer;
  * 服务实现
  * @author huey
  */
-@Service("customerService")
 public class CustomerServiceImpl implements CustomerService {
 
 	@Override
