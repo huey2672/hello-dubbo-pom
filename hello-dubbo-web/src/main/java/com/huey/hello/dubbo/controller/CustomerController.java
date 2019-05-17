@@ -22,18 +22,19 @@ import com.huey.hello.dubbo.vo.Customer;
 @WebServlet(name = "customerController", urlPatterns = { "/customer" })
 public class CustomerController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+
 	@Autowired
 	private CustomerService customerService;
-    
-    @Override
-    public void init(ServletConfig config) throws ServletException {
-    	super.init(config);
-    	SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this, config.getServletContext());
-    }
+
+	@Override
+	public void init(ServletConfig config) throws ServletException {
+		super.init(config);
+		SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this, config.getServletContext());
+	}
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
 		Long custId = Long.valueOf(req.getParameter("custId"));
 		Customer customer = customerService.getCustomerById(custId);
 		resp.getWriter().println(customer);
